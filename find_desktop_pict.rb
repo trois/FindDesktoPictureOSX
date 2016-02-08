@@ -94,7 +94,7 @@ end
 
 def select_last(arr)
   path = File.expand_path(arr.last['path'])
-  cmd = "osascript -e 'tell app \"Finder\" to  reveal ( POSIX file \"#{path}\")' > /dev/null"
+  cmd = "open -R #{path}"
   # print cmd
   system cmd
 end
